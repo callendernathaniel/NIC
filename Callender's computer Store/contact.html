@@ -5,12 +5,13 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 
-body {margin:0;font-family:Arial;
-
-
-
-background-image: url("background.png");
+body {margin:0;font-family:Arial;background-image: url("background.png");
 }
+
+
+
+
+
 
 .topnav {
   overflow: hidden;
@@ -130,22 +131,83 @@ background-image: url("background.png");
  
 }
 
-h2{
-	text-align: center;
-}
-
-p{
-	text-align: center;
+img{
+	float:left;
 }
 
 
-h1{
-	text-align: center;
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid ;
+  border-radius: 4px;
+  resize: vertical;
+	
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: ;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: ;
+}
+
+.container {
+  border-radius: 5px;
+  background-color:  ;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
 }
 
 </style>
 </head>
 <body>
+
+<img src="pic/logo.png" alt="logo" style="width:110px"  "height:110px">
+
+
 
 <div>
 <h1>Callender's Computer Store</h1>
@@ -153,10 +215,12 @@ h1{
 </div>
 
 
+
+
 <div class="topnav" id="myTopnav">
-  <a href="home.html" >Home</a>
-  <a href="about.html" class="active">About Us</a>
-  <a href="#contact">Products</a>
+  <a href="home.html" class="active">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="home.html">Products</a>
   <div class="dropdown">
     <button class="dropbtn">Services 
       <i class="fa fa-caret-down"></i>
@@ -171,30 +235,68 @@ h1{
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 
-<h1><b>ABOUT US</b></h1>
-<br>
-<section>
-	<h2>Our Goal</h2>
-	<p>We aim to be your one stop for all your computer and mobile needs.</p2>
-</section>
-
-<br>
-
-<section>
-	<h2>How it started</h2>
-	<p>Since I completed my tertiary education, I planned on opening a computer store. I worked hard for years after completing my education then opened this store.  With my passion and determination and help from friends I was able to make this all possible</p>
-</section>
 
 
+<h2>Contact Us</h2>
+<p>Full out this form and include your query or complaint. We will get back to you as soon as we can. </p>
+
+<div class="container">
+  <form action="/action_page.php">
+  <div class="row">
+    <div class="col-25">
+      <label for="fname">First Name</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="lname">Last Name</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    </div>
+  </div>
+  
+
+<div class="row">
+    <div class="col-25">
+      <label for="email">E-mail</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="email" name="email" placeholder="Your e-mail..">
+    </div>
+  </div>
 
 
+  <div class="row">
+    <div class="col-25">
+      <label for="subject">Reason for contacting us</label>
+    </div>
 
-
+    <div class="col-75">
+      <textarea id="subject" name="Reason for contacting us" placeholder="Write something.." style="height:200px"></textarea>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <input type="submit" value="Submit">
+  </div>
+  </form>
+</div>
 <div class="container">
 
 
+  
+
+<div class="card">
+<h</h>
+<div class="card">
+
 <div style="padding-left:16px">
-  <h2>
+  
+</div>
 </div>
 
 <script>
